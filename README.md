@@ -16,11 +16,14 @@ The system combines a **TF-IDF text representation**, **Logistic Regression clas
 
 ### Prediction Distribution
 
-![Prediction result](screenshots/prediction.png)
+![Prediction result](screenshots/model_prediction.png)
 
 ### Local Model Explanation
 
-![Model explanation](screenshots/explanation.png)
+![Model explanation](screenshots/model_analysis_information.png)
+
+### Local History and Model Training Numbers
+![Local History and Model Numbers](screenshots/model_info_and_local_history.png)
 
 ---
 
@@ -193,8 +196,8 @@ Rows = Actual
 Columns = Predicted
 
               Fake    Real
-Fake          3455     125
-Real            63    4123
+Fake          3463     117
+Real            88    4098
 ```
 
 Evaluation metrics are saved to:
