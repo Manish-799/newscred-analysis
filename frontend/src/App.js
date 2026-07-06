@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 
 
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL =
+  process.env.REACT_APP_API_BASE_URL
+  || "http://127.0.0.1:8000";
 const HISTORY_KEY = "news-analysis-history";
 const MAX_HISTORY_ITEMS = 6;
 

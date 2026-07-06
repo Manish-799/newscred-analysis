@@ -1,6 +1,7 @@
 import json
 import pickle
 from pathlib import Path
+import os
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -136,12 +137,19 @@ app = FastAPI(
 # CORS
 # ---------------------------------------------------------
 
+FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN")
+
 ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+
+if FRONTEND_ORIGIN:
+    ALLOWED_ORIGINS.append(
+        FRONTEND_ORIGIN.rstrip("/")
+    )
 
 app.add_middleware(
     CORSMiddleware,
