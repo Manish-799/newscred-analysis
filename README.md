@@ -43,6 +43,13 @@ The system returns:
 The application also exposes the trained model through a documented FastAPI REST API.
 
 ---
+## Live Demo
+
+**Application:** https://newscred-analysis.vercel.app
+
+**API Documentation:** https://newscred-api.onrender.com/docs
+
+> The free backend instance may require a short cold start after inactivity.
 
 ## Architecture
 
